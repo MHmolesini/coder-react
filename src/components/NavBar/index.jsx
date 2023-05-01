@@ -4,11 +4,13 @@ import { CartWidget } from "../CartWidget";
 export const NavBar = () => {
     return(
         <>
-            <ul>
-                <li>Pantalones</li>
-                <li>Remeras</li>
-                <li><CartWidget/>1</li>
-            </ul>
+            <nav>
+                <ul>
+                    <li>Pantalones</li>
+                    <li>Remeras</li>
+                    <li><CartWidget/>1</li>
+                </ul>
+            </nav>
         </>
     )
 }
