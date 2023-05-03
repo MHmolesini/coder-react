@@ -1,6 +1,6 @@
 import React from "react";
 import { CartWidget } from "../CartWidget";
-import logoZahria from '../../assets/images/logos/1.webp'
+import logoZahria from '../../../public/images/logos/1.webp'
 import './Navbar.css'
 
 export const NavBar = () => {
