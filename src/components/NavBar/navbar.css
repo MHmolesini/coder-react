@@ -12,12 +12,14 @@
     border: 1px solid black;
     z-index: 9999;
     background-color: white;
+    box-shadow: 1px 1px 3px black;
 }
 
 .header__logo {
     min-width: 20vw;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .header__navbar {
@@ -50,4 +52,15 @@
     min-width: 20vw;
     display: flex;
     justify-content: center;
+}
+
+.header__cart i {
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.header__cart i svg {
+    color: #000;
 }
