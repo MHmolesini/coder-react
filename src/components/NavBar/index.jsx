@@ -14,17 +14,17 @@ export const NavBar = () => {
                 
                 <ul className="header__navbar">
                     <li>
-                        <NavLink to={`/categoria/pantalones`}>
+                        <NavLink className='link' to={`/categoria/pantalones`}>
                             Pantalones
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={`/categoria/remeras`}>
+                        <NavLink className='link' to={`/categoria/remeras`}>
                             Remeras
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={`/categoria/camperas`}>
+                        <NavLink className='link' to={`/categoria/camperas`}>
                             Camperas
                         </NavLink>
                     </li>
