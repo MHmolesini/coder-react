@@ -51,18 +51,36 @@
     display: none;
 }
 
-.card .card__description button {
-    background-color: #ba95ca;
-    color: white;
+.card .card__description .itemBoton {
+    background-color: yellow;
     font-weight: 700;
-    height: 2.2rem;
-    width: 7rem;
+    height: 25px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
     text-align: center;
-    border-radius: 3px;
-    border: none;
+    border-radius: 5px;
     box-shadow: 3px 3px 5px black;
     cursor: pointer;
     margin-top: 0.25rem;
+}
+
+.card .card__description .itemBoton .itemBotonLink {
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.card .card__description .itemBoton:hover {
+    background-color: #535bf2;
+    box-shadow: 4px 4px 7px black;
+}
+
+.card .card__description .itemBoton:hover .itemBotonLink {
+    color: white;
 }
 
 .card .card__description button:hover {

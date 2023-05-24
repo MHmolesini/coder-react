@@ -4,9 +4,9 @@ import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer'
 //import { ItemCount} from './components/ItemCount/index'
 //import { Vista } from './components/Vista'
-import { Promesas } from './components/Promesas/index'
-import { Fetch } from './components/Fetch/index'
-import { AsyncAwait } from './components/Fetch/asyncAwait'
+// import { Promesas } from './components/Promesas/index'
+// import { Fetch } from './components/Fetch/index'
+// import { AsyncAwait } from './components/Fetch/asyncAwait'
 
 import { ItemDetailContainer } from './components/ItemDetailContainer'
 //import {Mensaje} from './components/Patrones/Mensaje'
@@ -18,7 +18,6 @@ import { ItemDetailContainer } from './components/ItemDetailContainer'
 // 1) Instalamos: npm install react-router-dom
 // 2) Importamos en nuestra APP los siguientes componentes de la libreria: BrowserRoyter, Route, Routes
 
-import {Home} from './components/Home'
 // import {Camperas} from './components/Camperas'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -62,9 +61,9 @@ function App() {
       <ItemDetailContainer/> */}
       
 
-      <Promesas/>
-      <Fetch/>
-      <AsyncAwait/>
+      {/* <Promesas/> */}
+      {/* <Fetch/>
+      <AsyncAwait/> */}
 
       {/* {
         <NuevoComponente/>
