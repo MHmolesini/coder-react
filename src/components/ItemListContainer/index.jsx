@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
-// import { PRODUCTS } from '../../assets/productList/productos'
-// import { Card } from '../Card'
 import { ItemList } from '../ItemList/index'
 import { getProductos, getProductosPorCategoria } from '../../asyncmock'
-import './itemListContainer.css'
 import { useParams } from 'react-router-dom'
+import './itemListContainer.css'
 
 export const ItemListContainer = ({greeting}) => {
 
@@ -24,29 +22,12 @@ export const ItemListContainer = ({greeting}) => {
 
     return (
         <>
-            <div className="main">
+            <div className="itemListContainer">
                 <h2>Principales productos</h2>
-                <ItemList productos={productos}/>
-            </div>
-            
-            {/* <div className="main">
-                <h2>{props.greeting}</h2>
-
-                <div className="main__products">
-                    {products.map(product => {
-                        return (
-                            <div className="main__products__item">
-                                <Card
-                                    key={product.id}
-                                    productImage={product.productImage}
-                                    productName={product.productName}
-                                    price={product.price}
-                                    id={product.id}/>
-                            </div>
-                        )
-                    })}
+                <div className='itemListContainer__main'>
+                    <ItemList productos={productos}/>
                 </div>
-            </div> */}
+            </div>
         </>
     )
 }

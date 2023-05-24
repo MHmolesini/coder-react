@@ -38,6 +38,11 @@
     
 }
 
+.itemDetail .itemDetail__section .itemDetail__section__description .precio {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
 .itemDetail .itemDetail__section .itemDetail__section__description .itemDetail__section__description__detalle .talle {
     background-color: white;
     border: 1px solid black;

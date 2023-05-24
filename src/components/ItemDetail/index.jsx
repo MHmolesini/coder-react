@@ -19,7 +19,7 @@ export const ItemDetail = ({id, categories, productName, price, productImage, ta
                     <div className='itemDetail__section__description'>
                         <div className='itemDetail__section__description__detalle'>
                             <h2 className='texto'>{productName}</h2>
-                            <p>${price}</p>
+                            <p className='precio'>${price}</p>
                             <p className='texto'>TALLE</p>
                             <div className='talle'>
                                 <p>{talle}</p>

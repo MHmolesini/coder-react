@@ -1,17 +1,20 @@
 /* Le doy propiedades a todas las cards de los productos */
 
-main {
+.itemListContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.main__products {
+.itemListContainer .itemListContainer__main {
     width: 70vw;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     margin: 0 auto;
 }
