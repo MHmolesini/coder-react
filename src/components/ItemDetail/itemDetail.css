@@ -1,0 +1,99 @@
+
+.itemDetail {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.itemDetail .itemDetail__categoria {
+    text-align: left;
+    padding-left: 4vw;
+}
+
+.itemDetail .itemDetail__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemDetail .itemDetail__section .itemDetail__section__image {
+    width: 500px;
+    height: 500px;
+}
+
+.itemDetail .itemDetail__section .itemDetail__section__image img {
+    width: 80%;
+    height: 80%;
+}
+
+.itemDetail .itemDetail__section .itemDetail__section__description {
+    width: 500px;
+    text-align: left;
+}
+
+.itemDetail .itemDetail__section .itemDetail__section__description .texto {
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+
+.itemDetail .itemDetail__section .itemDetail__section__description .itemDetail__section__description__detalle .talle {
+    background-color: white;
+    border: 1px solid black;
+    height: 30px;
+    width: 50px;
+    color: #000;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.itemDetail .itemDetail__section .itemDetail__section__description .itemDetail__section__description__detalle .talle:hover {
+    background-color: black;
+    border: 1px solid white;
+    color: #fff;
+    cursor: pointer;
+}
+
+.itemDetail .itemDetail__section .itemDetail__section__description .itemDetail__section__description__detalle .color {
+    background-color: #8f23ad;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-bottom: 16px;
+}
+
+.itemDetail__section__description__detalle .itemDetail__section__description__detalle__cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+    height: 40px;
+}
+
+.itemDetail__section__description__detalle .itemDetail__section__description__detalle__cart .agregarCarrito{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 60%;
+    padding: 0px 20px 0px 20px;
+    background-color: yellow;
+    border: none;
+    box-shadow: 2px 3px 5px black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.itemDetail__section__description__detalle .itemDetail__section__description__detalle__cart .agregarCarrito:hover {
+    background-color: #3AE41E;
+    box-shadow: 3px 4px 7px black;
+}

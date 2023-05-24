@@ -13,6 +13,7 @@ const productos = [
         categories: "pantalones",
         productName: "Pantalón de Jean con roturas",
         price: 8499.0,
+        talle: "M",
         firstDescription: 'Top Saten Color Rojo \n\nTalles único si te permite comprar significa que hay stock \n\nComprende del “S” al “M” ya que la tela es elastizada, si te quedo alguna duda escribinos!',
         stock: 9,
         productImage: product1,

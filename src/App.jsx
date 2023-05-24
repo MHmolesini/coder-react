@@ -7,7 +7,7 @@ import { ItemListContainer } from './components/ItemListContainer'
 import { Promesas } from './components/Promesas/index'
 import { Fetch } from './components/Fetch/index'
 import { AsyncAwait } from './components/Fetch/asyncAwait'
-import { Simpsons } from './components/Fetch/Simpsons'
+
 import { ItemDetailContainer } from './components/ItemDetailContainer'
 //import {Mensaje} from './components/Patrones/Mensaje'
 //import { MensajeConTitulo } from './components/Patrones/hoc'
@@ -65,7 +65,7 @@ function App() {
       <Promesas/>
       <Fetch/>
       <AsyncAwait/>
-      <Simpsons/>
+
       {/* {
         <NuevoComponente/>
       } */}
