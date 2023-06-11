@@ -16,6 +16,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import {Formulario} from './components/Formulario'
 import {FormData} from './components/FormData'
 
+import { CarritoProvider } from './Context/CarritoContext.jsx';
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -27,14 +29,15 @@ function App() {
 
       {/* Router */}
       <BrowserRouter>
-        <NavBar/>
-
-        <Routes>
-          <Route path='/' element={ <ItemListContainer/> }/>
-          <Route path='/categoria/:idCategoria' element={ <ItemListContainer/> }/>
-          <Route path='/item/:idItem' element={ <ItemDetailContainer/> }/>
-          <Route path='*' element={<h2>Sitio en Construccion</h2>}/>
-        </Routes>
+        <CarritoProvider>
+          <NavBar/>
+            <Routes>
+              <Route path='/' element={ <ItemListContainer/> }/>
+              <Route path='/categoria/:idCategoria' element={ <ItemListContainer/> }/>
+              <Route path='/item/:idItem' element={ <ItemDetailContainer/> }/>
+              <Route path='*' element={<h2>Sitio en Construccion</h2>}/>
+            </Routes>
+        </CarritoProvider>
       </BrowserRouter>
 
       {/* <Promesas/> */}
