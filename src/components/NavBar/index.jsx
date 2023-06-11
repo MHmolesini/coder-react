@@ -29,7 +29,7 @@ export const NavBar = () => {
                         </NavLink>
                     </li>
                 </ul>
-                <div className="header__cart"><CartWidget/>1</div>
+                <div className="header__cart"><CartWidget/></div>
             </nav>
         </>
     )

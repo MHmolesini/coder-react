@@ -8,6 +8,7 @@ import { ItemListContainer } from './components/ItemListContainer'
 // import { AsyncAwait } from './components/Fetch/asyncAwait'
 
 import { ItemDetailContainer } from './components/ItemDetailContainer'
+import { Cart } from './components/Cart'
 //import {Mensaje} from './components/Patrones/Mensaje'
 //import { MensajeConTitulo } from './components/Patrones/hoc'
 
@@ -36,6 +37,7 @@ function App() {
               <Route path='/categoria/:idCategoria' element={ <ItemListContainer/> }/>
               <Route path='/item/:idItem' element={ <ItemDetailContainer/> }/>
               <Route path='*' element={<h2>Sitio en Construccion</h2>}/>
+              <Route path='/cart' element={<Cart/>}/>
             </Routes>
         </CarritoProvider>
       </BrowserRouter>

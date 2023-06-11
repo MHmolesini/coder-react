@@ -18,7 +18,7 @@ export const ItemDetail = ({id, stock, categories, productName, price, productIm
       console.log("Productos Agregados:" + cantidad);
   
       //Ahora acá creo un objeto con el item y la cantidad:
-      const item = { id, productName, price };
+      const item = { id, productName, price, talle, productImage };
       agregarProducto(item, cantidad);
     }
 
