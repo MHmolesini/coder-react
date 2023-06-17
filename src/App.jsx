@@ -2,21 +2,13 @@ import { useState } from 'react'
 import './App.css'
 import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer'
-//import { Vista } from './components/Vista'
-// import { Promesas } from './components/Promesas/index'
-// import { Fetch } from './components/Fetch/index'
-// import { AsyncAwait } from './components/Fetch/asyncAwait'
 
 import { ItemDetailContainer } from './components/ItemDetailContainer'
 import { Cart } from './components/Cart'
-//import {Mensaje} from './components/Patrones/Mensaje'
-//import { MensajeConTitulo } from './components/Patrones/hoc'
 import { Checkout } from './components/Checkout'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import {Formulario} from './components/Formulario'
-import {FormData} from './components/FormData'
 
 import { CarritoProvider } from './Context/CarritoContext.jsx';
 //import { Productos } from './components/Productos/Productos'
@@ -45,15 +37,6 @@ function App() {
         </CarritoProvider>
       </BrowserRouter>
 
-      {/* <Promesas/> */}
-      {/* <Fetch/>
-      <AsyncAwait/> */}
-      {/* {
-        <NuevoComponente/>
-      } */}
-      {/* <Productos/> */}
-      <Formulario/>
-      <FormData/>
     </>
   )
 }
