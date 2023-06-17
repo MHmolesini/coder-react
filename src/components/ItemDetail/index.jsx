@@ -12,12 +12,10 @@ export const ItemDetail = ({id, stock, categories, productName, price, productIm
 
     const { agregarProducto } = useContext(CarritoContext);
 
-    //2)Creamos una función manejadora de la cantidad: 
     const manejadorCantidad = (cantidad) => {
       setAgregarCantidad(cantidad);
       console.log("Productos Agregados:" + cantidad);
-  
-      //Ahora acá creo un objeto con el item y la cantidad:
+
       const item = { id, productName, price, talle, productImage };
       agregarProducto(item, cantidad);
     }
@@ -36,7 +34,10 @@ export const ItemDetail = ({id, stock, categories, productName, price, productIm
                         <div className='itemDetail__section__description__detalle'>
                             <h2 className='texto'>{productName}</h2>
                             <p className='precio'>${price}</p>
-                            <p className='texto'>Unidades disponibles: {stock}</p>
+                            <p className='texto'>Unidades disponibles:</p>
+                            <div className='talle'>
+                                <p>{stock}</p>
+                            </div>
                             <p className='texto'>TALLE</p>
                             <div className='talle'>
                                 <p>{talle}</p>

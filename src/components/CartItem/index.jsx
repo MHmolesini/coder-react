@@ -15,14 +15,17 @@ export const CartItem = ({ item, cantidad }) => {
         </div>
         <div className="cartItem__detail">
           <h4>{item.productName}</h4>
-          <p>Talle: {item.talle}</p>
-          <p>Cantidad: {cantidad}</p>
+          <p>Talle:</p>
+          <div className="numero">{item.talle}</div>
+          <p>Cantidad:</p>
+          <div className="numero">{cantidad}</div>
         </div>
         <div className="cartItem__check">
           <button onClick={() => eliminarProducto(item.id)}>
             <i><BsTrash/></i>
           </button>
-          <p>Precio: {item.price}</p>
+          <p>Precio:</p>
+          <div className="numero">{item.price}</div>
         </div>
       </div>
     </>

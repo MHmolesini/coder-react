@@ -1,0 +1,51 @@
+form {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    margin-bottom: 2rem;
+}
+
+form .checkout__form__label {
+    width: 60vw;
+    padding-right: 20px;
+}
+  
+/* Estilos de los campos de entrada */
+form input[type="text"],
+form input[type="number"],
+form input[type="email"] {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+/* Estilos de los botones */
+form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+  
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos de los mensajes dinamicos */
+.checkout .error {
+    color: red;
+    margin: 1rem;
+}
+
+.checkout strong {
+    margin: 2rem;
+    padding: 2rem;
+    font-size: 1.25rem;
+}

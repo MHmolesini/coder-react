@@ -13,7 +13,7 @@ export const CartWidget = () => {
       <Link to='/cart'>
         <i><AiOutlineShoppingCart/></i>
         {
-          cantidadTotal > 0 && <span>{cantidadTotal}</span>
+          cantidadTotal > 0 && <span className='cantidad'>{cantidadTotal}</span>
         }
       </Link>
     </>

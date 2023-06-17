@@ -11,7 +11,6 @@ export const Card = (card) => {
             <div className="card__description">
                 <p className="card__description__price">$ {card.price}</p>
                 <p>{card.productName}</p>
-                {/* <p>{card.id}</p> */}
                 <button>Agregar</button>
             </div>
         </div>

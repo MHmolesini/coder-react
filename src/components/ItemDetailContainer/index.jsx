@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-//import { getUnProducto } from '../../asyncmock'
 import { ItemDetail } from '../ItemDetail'
 
 import { getDoc, doc } from 'firebase/firestore'
@@ -23,11 +22,6 @@ export const ItemDetailContainer = () => {
             })
             .catch(error => console.log(error))
     }, [idItem])
-
-    // useEffect(()=>{
-    //     getUnProducto(idItem)
-    //         .then(res => setProducto(res))
-    // }, [idItem])
 
     return (
         <>

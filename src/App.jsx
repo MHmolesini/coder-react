@@ -1,28 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { NavBar } from './components/NavBar'
 import { ItemListContainer } from './components/ItemListContainer'
-
 import { ItemDetailContainer } from './components/ItemDetailContainer'
 import { Cart } from './components/Cart'
 import { Checkout } from './components/Checkout'
-
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-
 import { CarritoProvider } from './Context/CarritoContext.jsx';
-//import { Productos } from './components/Productos/Productos'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  // const NuevoComponente = MensajeConTitulo(Mensaje)
 
   return (
     <>
-      {/* <Vista/> */}
-
-      {/* Router */}
       <BrowserRouter>
         <CarritoProvider>
           <NavBar/>
@@ -36,7 +24,6 @@ function App() {
             </Routes>
         </CarritoProvider>
       </BrowserRouter>
-
     </>
   )
 }

@@ -2,10 +2,11 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { CarritoContext } from '../../Context/CarritoContext'
 import { db } from '../../services/config'
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc, getDoc, updateDoc, doc } from 'firebase/firestore'
+import './checkout.css'
 
 export const Checkout = () => {
-    const {carrito, vaciarCarrito} = useContext(CarritoContext)
+    const {carrito, vaciarCarrito, total} = useContext(CarritoContext)
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
     const [telefono, setTelefono] = useState("")
@@ -41,28 +42,46 @@ export const Checkout = () => {
             nombre,
             apellido,
             telefono,
-            email
+            email,
+            fecha: new Date()
         }
 
-        // Guardamos la orden en la base de datos
-        addDoc(collection(db, 'ordenes'), orden)
-            .then(docRef => {
-                setOrdenId(docRef.id)
-                vaciarCarrito()
+        Promise.all(
+            orden.items.map(async(productoOrden) => {
+                const productoRef = doc(db, 'inventario', productoOrden.id)
+                const productoDoc = await getDoc(productoRef)
+                const stockActual = productoDoc.data().stock
+
+                await updateDoc(productoRef, {
+                    stock: stockActual - productoOrden.cantidad,
+                })
+
             })
-            .catch(error => {
-                console.error("Error al crear la orden: ", error)
-                setError("Se produjo un error al crear la orden")
+        )
+            .then(() => {
+                addDoc(collection(db, 'ordenes'), orden)
+                    .then((docRef) => {
+                        setOrdenId(docRef.id)
+                        vaciarCarrito()
+                    })
+                    .catch(error => {
+                        console.error("Error al crear la orden: ", error)
+                        setError("Se produjo un error al crear la orden")
+                    })
+            })
+            .catch((error) => {
+                console.error("Error al actualizar el stock", error)
+                setError("Se produjo un error al actualizar el stock de los productos")
             })
     }
 
     return (
         <>
-              <div>
+              <div className='checkout'>
                 <h2>Checkout</h2>
-                <form onSubmit={manejadorFormulario}>
+                <form className='checkout__form' onSubmit={manejadorFormulario}>
                     {carrito.map(producto => {
-                        <div>
+                        <div className='checkout__form__cart'>
                             <p>
                                 {producto.item.productName} x {producto.cantidad}
                             </p>
@@ -70,29 +89,30 @@ export const Checkout = () => {
                             <hr />
                         </div>
                     })}
+                    <p>Total compra: {total}</p>
                     <hr />
-                        <div>
+                        <div className='checkout__form__label'>
                             <label htmlFor="nombre">Nombre</label>
                             <input type="text" id='nombre' onChange={(e)=> setNombre(e.target.value)} value={nombre}/>
                         </div>
-                        <div>
+                        <div className='checkout__form__label'>
                             <label htmlFor="apellido">Apellido</label>
                             <input type="text" id='apellido' onChange={(e)=> setApellido(e.target.value)} value={apellido}/>
                         </div>
-                        <div>
+                        <div className='checkout__form__label'>
                             <label htmlFor="telefono">Telefono</label>
                             <input type="number" id='telefono' onChange={(e)=> setTelefono(e.target.value)} value={telefono}/>
                         </div>
-                        <div>
+                        <div className='checkout__form__label'>
                             <label htmlFor="email">Email</label>
                             <input type="email" id='email' onChange={(e)=> setEmail(e.target.value)} value={email}/>
                         </div>
-                        <div>
+                        <div className='checkout__form__label'>
                             <label htmlFor="emailConfirmacion">emailConfirmacion</label>
                             <input type="email" id='emailConfirmacion' onChange={(e)=> setEmailConfirmacion(e.target.value)} value={emailConfirmacion}/>
                         </div>
 
-                        {error && <p>{error}</p>}
+                        {error && <p className='error'>{error}</p>}
                         <button type='submit'>Finalizar Compra</button>
                 </form>
                 {
@@ -104,5 +124,3 @@ export const Checkout = () => {
         </>
     )
 }
-
-

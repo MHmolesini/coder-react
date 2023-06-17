@@ -35,7 +35,6 @@
 .itemDetail .itemDetail__section .itemDetail__section__description .texto {
     text-transform: uppercase;
     font-weight: 700;
-    
 }
 
 .itemDetail .itemDetail__section .itemDetail__section__description .precio {
@@ -54,7 +53,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .itemDetail .itemDetail__section .itemDetail__section__description .itemDetail__section__description__detalle .talle:hover {
@@ -104,10 +102,6 @@
 }
 
 .itemDetail__section__description__detalle .itemDetail__section__description__detalle__cart .terminarCompra{
-    /* display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; */
     font-weight: 700;
     text-transform: uppercase;
     width: 80%;
